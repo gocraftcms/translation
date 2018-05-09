@@ -1,0 +1,41 @@
+{
+    "name": "panlatent/craft-poedit",
+    "description": "Extract, edit and generate your translations in CP",
+    "type": "craft-plugin",
+    "version": "0.1.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "poedit"
+    ],
+    "support": {
+        "docs": "https://github.com/panlatent/craft-poedit/blob/master/README.md",
+        "issues": "https://github.com/panlatent/craft-poedit/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "panlatent",
+            "email": "panlatent@gmail.com",
+            "homepage": "https://panlatent.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "panlatent\\poedit\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "poedit",
+        "handle": "poedit",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/panlatent/craft-poedit/master/CHANGELOG.md",
+        "class": "panlatent\\poedit\\Poedit"
+    }
+}
