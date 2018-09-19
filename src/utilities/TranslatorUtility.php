@@ -1,20 +1,16 @@
 <?php
 /**
- * poedit plugin for Craft CMS 3.x
+ * Translator plugin for Craft 3
  *
- * Extract, edit and generate your translations in CP
- *
- * @link      https://panlatent.com
- * @copyright Copyright (c) 2018 panlatent
+ * @link      https://panlatent.com/
+ * @copyright Copyright (c) 2018 panlatent@gmail.com
  */
 
-namespace panlatent\poedit\utilities;
-
-use panlatent\poedit\Poedit;
-use panlatent\poedit\assetbundles\poeditutility\PoeditUtilityAsset;
+namespace panlatent\craft\translator\utilities;
 
 use Craft;
 use craft\base\Utility;
+use panlatent\craft\translator\assets\TranslatorUtilityAsset;
 
 /**
  * poedit Utility
@@ -27,7 +23,7 @@ use craft\base\Utility;
  * @package   Poedit
  * @since     0.1.0
  */
-class Poedit extends Utility
+class TranslatorUtility extends Utility
 {
     // Static
     // =========================================================================
@@ -39,7 +35,7 @@ class Poedit extends Utility
      */
     public static function displayName(): string
     {
-        return Craft::t('poedit', 'Poedit');
+        return Craft::t('translator', 'Translator');
     }
 
     /**
@@ -83,11 +79,11 @@ class Poedit extends Utility
      */
     public static function contentHtml(): string
     {
-        Craft::$app->getView()->registerAssetBundle(PoeditUtilityAsset::class);
+        Craft::$app->getView()->registerAssetBundle(TranslatorUtilityAsset::class);
 
         $someVar = 'Have a nice day!';
         return Craft::$app->getView()->renderTemplate(
-            'poedit/_components/utilities/Poedit_content',
+            'translator/_components/utilities/Translator',
             [
                 'someVar' => $someVar
             ]

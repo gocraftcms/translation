@@ -1,6 +1,6 @@
 {
-    "name": "panlatent/craft-poedit",
-    "description": "Extract, edit and generate your translations in CP",
+    "name": "panlatent/craft-translator",
+    "description": "Translator is a plugin to edit your i18n translations for Craft 3",
     "type": "craft-plugin",
     "version": "0.1.0",
     "keywords": [
@@ -8,11 +8,11 @@
         "cms",
         "craftcms",
         "craft-plugin",
-        "poedit"
+        "translator"
     ],
     "support": {
-        "docs": "https://github.com/panlatent/craft-poedit/blob/master/README.md",
-        "issues": "https://github.com/panlatent/craft-poedit/issues"
+        "docs": "https://github.com/panlatent/craft-translator/blob/master/README.md",
+        "issues": "https://github.com/panlatent/craft-translator/issues"
     },
     "license": "MIT",
     "authors": [
@@ -27,15 +27,15 @@
     },
     "autoload": {
         "psr-4": {
-          "panlatent\\poedit\\": "src/"
+          "panlatent\\craft\\translator\\": "src/"
         }
     },
     "extra": {
-        "name": "poedit",
-        "handle": "poedit",
+        "name": "Translator",
+        "handle": "translator",
         "hasCpSettings": true,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/panlatent/craft-poedit/master/CHANGELOG.md",
-        "class": "panlatent\\poedit\\Poedit"
+        "changelogUrl": "https://raw.githubusercontent.com/panlatent/craft-translator/master/CHANGELOG.md",
+        "class": "panlatent\\craft\\translator\\Translator"
     }
 }
