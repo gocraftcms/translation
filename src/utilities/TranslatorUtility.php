@@ -2,26 +2,21 @@
 /**
  * Translator plugin for Craft 3
  *
- * @link      https://panlatent.com/
+ * @link      https://gocraftcms.com/
  * @copyright Copyright (c) 2018 panlatent@gmail.com
  */
 
-namespace panlatent\craft\translator\utilities;
+namespace gocraft\translation\utilities;
 
 use Craft;
 use craft\base\Utility;
-use panlatent\craft\translator\assets\TranslatorUtilityAsset;
+use gocraft\translation\assets\TranslatorUtilityAsset;
 
 /**
- * poedit Utility
+ * Class TranslatorUtility
  *
- * Utility is the base class for classes representing Control Panel utilities.
- *
- * https://craftcms.com/docs/plugins/utilities
- *
- * @author    panlatent
- * @package   Poedit
- * @since     0.1.0
+ * @package gocraft\translation\utilities
+ * @author Panlatent <panlatent@gmail.com>
  */
 class TranslatorUtility extends Utility
 {
@@ -35,7 +30,7 @@ class TranslatorUtility extends Utility
      */
     public static function displayName(): string
     {
-        return Craft::t('translator', 'Translator');
+        return Craft::t('translation', 'Translation Utility');
     }
 
     /**
@@ -47,7 +42,7 @@ class TranslatorUtility extends Utility
      */
     public static function id(): string
     {
-        return 'poedit-poedit';
+        return 'translator';
     }
 
     /**
@@ -57,7 +52,7 @@ class TranslatorUtility extends Utility
      */
     public static function iconPath()
     {
-        return Craft::getAlias("@panlatent/poedit/assetbundles/poeditutility/dist/img/Poedit-icon.svg");
+        return Craft::getAlias("@gocraft/translator/icon.svg");
     }
 
     /**
@@ -83,7 +78,7 @@ class TranslatorUtility extends Utility
 
         $someVar = 'Have a nice day!';
         return Craft::$app->getView()->renderTemplate(
-            'translator/_components/utilities/Translator',
+            'translation/_components/utilities/Translator',
             [
                 'someVar' => $someVar
             ]

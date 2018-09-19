@@ -1,7 +1,7 @@
 <?php
 
 
-namespace panlatent\craft\translator\base;
+namespace gocraft\translation\base;
 
 
 trait TranslatorTrait

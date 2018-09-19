@@ -1,17 +1,17 @@
-Craft Translator
-================
-[![Build Status](https://travis-ci.org/panlatent/craft-translator.svg)](https://travis-ci.org/panlatent/craft-translator)
-[![Coverage Status](https://coveralls.io/repos/github/panlatent/craft-translator/badge.svg?branch=master)](https://coveralls.io/github/panlatent/craft-translator?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/panlatent/craft-translator/v/stable.svg)](https://packagist.org/packages/panlatent/craft-translator)
-[![Total Downloads](https://poser.pugx.org/panlatent/craft-translator/downloads.svg)](https://packagist.org/packages/panlatent/craft-translator) 
-[![Latest Unstable Version](https://poser.pugx.org/panlatent/craft-translator/v/unstable.svg)](https://packagist.org/packages/panlatent/craft-translator)
-[![License](https://poser.pugx.org/panlatent/craft-translator/license.svg)](https://packagist.org/packages/panlatent/craft-translator)
+Translation Plugin for Craft 3
+===============================
+[![Build Status](https://travis-ci.org/gocraftcms/translation.svg)](https://travis-ci.org/gocraftcms/translation)
+[![Coverage Status](https://coveralls.io/repos/github/gocraftcms/translation/badge.svg?branch=master)](https://coveralls.io/github/gocraftcms/translation?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/gocraftcms/translation/v/stable.svg)](https://packagist.org/packages/gocraftcms/translation)
+[![Total Downloads](https://poser.pugx.org/gocraftcms/translation/downloads.svg)](https://packagist.org/packages/gocraftcms/translation) 
+[![Latest Unstable Version](https://poser.pugx.org/gocraftcms/translation/v/unstable.svg)](https://packagist.org/packages/gocraftcms/translation)
+[![License](https://poser.pugx.org/gocraftcms/translation/license.svg)](https://packagist.org/packages/gocraftcms/translation)
 [![Craft CMS](https://img.shields.io/badge/Powered_by-Craft_CMS-orange.svg?style=flat)](https://craftcms.com/)
 [![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](https://www.yiiframework.com/)
 
 ![Screenshot](resources/img/translator.png)
 
-Translator is a plugin to edit your i18n translations for Craft 3
+Translation is a plugin to edit your i18n translations for Craft 3.
 
 Features
 ---------
@@ -32,9 +32,9 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require panlatent/craft-translator
+        composer require gocraftcms/translation
 
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Translator.
+3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Translation.
 
 Usage
 -----
@@ -44,4 +44,4 @@ Documentation
 
 License
 -------
-The Craft Translator is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+The Translation is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).

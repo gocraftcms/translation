@@ -2,7 +2,7 @@
 
 namespace gocraft\translation\base;
 
-trait ExtractorTrait
+trait SourceTrait
 {
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace panlatent\craft\translator\assets;
+namespace gocraft\translation\assets;
 
 use craft\web\AssetBundle;
 

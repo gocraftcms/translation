@@ -1,6 +1,6 @@
 {
-    "name": "panlatent/craft-translator",
-    "description": "Translator is a plugin to edit your i18n translations for Craft 3",
+    "name": "gocraft/translation",
+    "description": "Translation is a plugin to edit your i18n translations for Craft 3",
     "type": "craft-plugin",
     "version": "0.1.0",
     "keywords": [
@@ -8,11 +8,13 @@
         "cms",
         "craftcms",
         "craft-plugin",
+        "translation",
+        "i18n",
         "translator"
     ],
     "support": {
-        "docs": "https://github.com/panlatent/craft-translator/blob/master/README.md",
-        "issues": "https://github.com/panlatent/craft-translator/issues"
+        "docs": "https://github.com/gocraftcms/translation/blob/master/README.md",
+        "issues": "https://github.com/gocraftcms/translation/issues"
     },
     "license": "MIT",
     "authors": [
@@ -27,15 +29,15 @@
     },
     "autoload": {
         "psr-4": {
-          "panlatent\\craft\\translator\\": "src/"
+          "gocraft\\translator\\": "src/"
         }
     },
     "extra": {
-        "name": "Translator",
-        "handle": "translator",
+        "name": "Translation",
+        "handle": "translation",
         "hasCpSettings": true,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/panlatent/craft-translator/master/CHANGELOG.md",
-        "class": "panlatent\\craft\\translator\\Translator"
+        "changelogUrl": "https://raw.githubusercontent.com/gocraftcms/translation/master/CHANGELOG.md",
+        "class": "gocraft\\translation\\Translation"
     }
 }

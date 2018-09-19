@@ -2,11 +2,11 @@
 /**
  * Translator plugin for Craft 3
  *
- * @link      https://panlatent.com/
+ * @link      https://gocraftcms.com/
  * @copyright Copyright (c) 2018 panlatent@gmail.com
  */
 
-namespace panlatent\craft\translator;
+namespace gocraft\translation;
 
 use Craft;
 use craft\base\Plugin;
@@ -16,23 +16,23 @@ use craft\events\PluginEvent;
 use craft\console\Application as ConsoleApplication;
 use craft\services\Utilities;
 use craft\events\RegisterComponentTypesEvent;
-use panlatent\craft\translator\models\Settings;
-use panlatent\craft\translator\utilities\TranslatorUtility;
+use gocraft\translation\models\Settings;
+use gocraft\translation\utilities\TranslatorUtility;
 use yii\base\Event;
 
 /**
  * Class Translator
  *
- * @package panlatent\craft\translator
+ * @package gocraft\translation
  * @author Panlatent <panlatent@gmail.com>
  */
-class Translator extends Plugin
+class Translation extends Plugin
 {
     // Static Properties
     // =========================================================================
 
     /**
-     * @var Translator
+     * @var Translation
      */
     public static $plugin;
 
@@ -55,16 +55,16 @@ class Translator extends Plugin
         parent::init();
         self::$plugin = $this;
 
-        Craft::setAlias('@translator', $this->getBasePath());
+        Craft::setAlias('@gocraft/translation', $this->getBasePath());
 
-        Craft::$app->i18n->translations['translator'] = [
+        Craft::$app->i18n->translations['translation'] = [
             'class' => PhpMessageSource::class,
-            'basePath' => '@translator/translations',
+            'basePath' => '@gocraft/translation/translations',
         ];
 
         // Add in our console commands
         if (Craft::$app instanceof ConsoleApplication) {
-            $this->controllerNamespace = 'panlatent\craft\translator\console\controllers';
+            $this->controllerNamespace = 'gocraft\translation\console\controllers';
         }
 
         // Register our utilities
@@ -89,7 +89,7 @@ class Translator extends Plugin
 
         Craft::info(
             Craft::t(
-                'translator',
+                'translation',
                 '{name} plugin loaded',
                 ['name' => $this->name]
             ),

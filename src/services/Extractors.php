@@ -1,6 +1,6 @@
 <?php
 
-namespace panlatent\craft\translator\services;
+namespace gocraft\translation\services;
 
 use craft\events\RegisterComponentTypesEvent;
 use yii\base\Component;

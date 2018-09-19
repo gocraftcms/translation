@@ -1,8 +1,8 @@
 <?php
 
-namespace panlatent\craft\translator\extractors;
+namespace gocraft\translation\extractors;
 
-use panlatent\craft\translator\base\Extractor;
+use gocraft\translation\base\Extractor;
 
 class CraftExtractor extends Extractor
 {

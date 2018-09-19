@@ -1,6 +1,6 @@
 <?php
 
-namespace panlatent\craft\translator\base;
+namespace gocraft\translation\base;
 
 use craft\base\SavableComponent;
 

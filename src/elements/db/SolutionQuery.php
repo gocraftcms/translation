@@ -1,6 +1,6 @@
 <?php
 
-namespace panlatent\craft\translator\elements\db;
+namespace gocraft\translation\elements\db;
 
 use craft\elements\db\ElementQuery;
 

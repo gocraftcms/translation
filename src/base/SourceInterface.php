@@ -4,7 +4,7 @@ namespace gocraft\translation\base;
 
 use craft\base\SavableComponentInterface;
 
-interface TranslatorInterface extends SavableComponentInterface
+interface SourceInterface extends SavableComponentInterface
 {
-
+    public function save();
 }

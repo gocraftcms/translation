@@ -1,15 +1,15 @@
 <?php
 
-namespace panlatent\craft\translator\elements;
+namespace gocraft\translation\elements;
 
 use craft\base\Element;
 use craft\elements\db\ElementQueryInterface;
-use panlatent\craft\translator\elements\db\SolutionQuery;
+use gocraft\translation\elements\db\SolutionQuery;
 
 /**
  * Class Solution
  *
- * @package panlatent\craft\translator\elements
+ * @package gocraft\translation\elements
  * @author Panlatent <panlatent@gmail.com>
  */
 class Solution extends Element

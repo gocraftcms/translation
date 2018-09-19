@@ -1,6 +1,6 @@
 <?php
 
-namespace panlatent\craft\translator\models;
+namespace gocraft\translation\models;
 
 use craft\base\Model;
 
