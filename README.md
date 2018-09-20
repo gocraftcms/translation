@@ -41,6 +41,7 @@ Usage
 
 Documentation
 -------------
+[Documentation](https://docs.gocraftcms.com/en/latest/translation)
 
 License
 -------
