@@ -54,7 +54,7 @@ class Plugin extends \craft\base\Plugin
 
         Craft::setAlias('@gocraft/translation', $this->getBasePath());
 
-        Craft::$app->i18n->translations['translation'] = [
+        Craft::$app->i18n->translations['gocraft-translation'] = [
             'class' => PhpMessageSource::class,
             'basePath' => '@gocraft/translation/translations',
         ];
@@ -75,7 +75,7 @@ class Plugin extends \craft\base\Plugin
 
         Craft::info(
             Craft::t(
-                'translation',
+                'gocraft-translation',
                 '{name} plugin loaded',
                 ['name' => $this->name]
             ),
