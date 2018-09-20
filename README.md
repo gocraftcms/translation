@@ -9,7 +9,7 @@ Translation plugin for Craft 3
 [![Craft CMS](https://img.shields.io/badge/Powered_by-Craft_CMS-orange.svg?style=flat)](https://craftcms.com/)
 [![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](https://www.yiiframework.com/)
 
-![Screenshot](resources/img/translator.png)
+![Screenshot](resources/img/translation.png)
 
 Translation is a plugin to edit your i18n translations for Craft 3.
 
