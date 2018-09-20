@@ -13,7 +13,7 @@
         "translator"
     ],
     "support": {
-        "docs": "https://github.com/gocraftcms/translation/blob/master/README.md",
+        "docs": "https://docs.gocraftcms.com/translation",
         "issues": "https://github.com/gocraftcms/translation/issues"
     },
     "license": "MIT",
@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-          "gocraft\\translator\\": "src/"
+          "gocraft\\translation\\": "src/"
         }
     },
     "extra": {
@@ -38,6 +38,6 @@
         "hasCpSettings": true,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/gocraftcms/translation/master/CHANGELOG.md",
-        "class": "gocraft\\translation\\Translation"
+        "class": "gocraft\\translation\\Plugin"
     }
 }

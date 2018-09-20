@@ -1,18 +1,15 @@
 <?php
 /**
- * Translator plugin for Craft 3
+ * Translation plugin for Craft 3
  *
- * @link      https://gocraftcms.com/
- * @copyright Copyright (c) 2018 panlatent@gmail.com
+ * @link https://gocraftcms.com/
+ * @copyright Copyright (c) 2018 gocraftcms.com
  */
 
 namespace gocraft\translation;
 
 use Craft;
-use craft\base\Plugin;
 use craft\i18n\PhpMessageSource;
-use craft\services\Plugins;
-use craft\events\PluginEvent;
 use craft\console\Application as ConsoleApplication;
 use craft\services\Utilities;
 use craft\events\RegisterComponentTypesEvent;
@@ -21,18 +18,18 @@ use gocraft\translation\utilities\TranslatorUtility;
 use yii\base\Event;
 
 /**
- * Class Translator
+ * Class Plugin
  *
  * @package gocraft\translation
  * @author Panlatent <panlatent@gmail.com>
  */
-class Translation extends Plugin
+class Plugin extends \craft\base\Plugin
 {
     // Static Properties
     // =========================================================================
 
     /**
-     * @var Translation
+     * @var Plugin
      */
     public static $plugin;
 
@@ -76,17 +73,6 @@ class Translation extends Plugin
             }
         );
 
-        // Do something after we're installed
-        Event::on(
-            Plugins::class,
-            Plugins::EVENT_AFTER_INSTALL_PLUGIN,
-            function (PluginEvent $event) {
-                if ($event->plugin === $this) {
-                    // We were just installed
-                }
-            }
-        );
-
         Craft::info(
             Craft::t(
                 'translation',
@@ -119,7 +105,7 @@ class Translation extends Plugin
     protected function settingsHtml(): string
     {
         return Craft::$app->view->renderTemplate(
-            'translator/settings',
+            'translation/settings',
             [
                 'settings' => $this->getSettings()
             ]

@@ -1,4 +1,4 @@
-Translation Plugin for Craft 3
+Translation plugin for Craft 3
 ===============================
 [![Build Status](https://travis-ci.org/gocraftcms/translation.svg)](https://travis-ci.org/gocraftcms/translation)
 [![Coverage Status](https://coveralls.io/repos/github/gocraftcms/translation/badge.svg?branch=master)](https://coveralls.io/github/gocraftcms/translation?branch=master)

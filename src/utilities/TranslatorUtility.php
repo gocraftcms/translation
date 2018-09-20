@@ -1,9 +1,9 @@
 <?php
 /**
- * Translator plugin for Craft 3
+ * Translation plugin for Craft 3
  *
- * @link      https://gocraftcms.com/
- * @copyright Copyright (c) 2018 panlatent@gmail.com
+ * @link https://gocraftcms.com/
+ * @copyright Copyright (c) 2018 gocraftcms.com
  */
 
 namespace gocraft\translation\utilities;
@@ -30,7 +30,7 @@ class TranslatorUtility extends Utility
      */
     public static function displayName(): string
     {
-        return Craft::t('translation', 'Translation Utility');
+        return Craft::t('translation', 'Translator Utility');
     }
 
     /**
@@ -52,7 +52,7 @@ class TranslatorUtility extends Utility
      */
     public static function iconPath()
     {
-        return Craft::getAlias("@gocraft/translator/icon.svg");
+        return Craft::getAlias("@gocraft/translation/icon.svg");
     }
 
     /**
