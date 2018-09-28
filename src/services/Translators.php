@@ -2,13 +2,16 @@
 /**
  * Translation plugin for Craft 3
  *
- * @link https://gocraftcms.com/
- * @copyright Copyright (c) 2018 gocraftcms.com
+ * @link https://panlatent.com/
+ * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace gocraft\translation\services;
+namespace panlatent\translation\services;
 
 use craft\events\RegisterComponentTypesEvent;
+use panlatent\translation\translators\BaiduTranslator;
+use panlatent\translation\translators\GoogleTranslator;
+use panlatent\translation\translators\YoudaoTranslator;
 use yii\base\Component;
 
 class Translators extends Component
@@ -20,7 +23,11 @@ class Translators extends Component
      */
     public function getTranslatorTypes(): array
     {
-        $types = [];
+        $types = [
+            GoogleTranslator::class,
+            YoudaoTranslator::class,
+            BaiduTranslator::class,
+        ];
 
         $event = new RegisterComponentTypesEvent([
             'types' => $types,

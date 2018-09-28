@@ -2,26 +2,39 @@
 /**
  * Translation plugin for Craft 3
  *
- * @link https://gocraftcms.com/
- * @copyright Copyright (c) 2018 gocraftcms.com
+ * @link https://panlatent.com/
+ * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace gocraft\translation;
+namespace panlatent\translation;
 
 use Craft;
-use craft\i18n\PhpMessageSource;
 use craft\console\Application as ConsoleApplication;
+use craft\events\RegisterCpNavItemsEvent;
+use craft\events\RegisterUrlRulesEvent;
 use craft\services\Utilities;
 use craft\events\RegisterComponentTypesEvent;
-use gocraft\translation\models\Settings;
-use gocraft\translation\utilities\TranslatorUtility;
+use craft\web\twig\variables\Cp;
+use craft\web\UrlManager;
+use panlatent\translation\helpers\ComponentHelper;
+use panlatent\translation\models\Settings;
+use panlatent\translation\services\Extractors;
+use panlatent\translation\services\Solutions;
+use panlatent\translation\services\Sources;
+use panlatent\translation\services\Translators;
+use panlatent\translation\utilities\TranslatorUtility;
 use yii\base\Event;
 
 /**
- * Class Plugin
+ * Class Translation Plugin
  *
- * @package gocraft\translation
+ * @package panlatent\translation
+ * @property-read Extractors $extractors
+ * @property-read Solutions $solutions
+ * @property-read Sources $sources
+ * @property-read Translators $translators
  * @author Panlatent <panlatent@gmail.com>
+ * @since 0.1.0
  */
 class Plugin extends \craft\base\Plugin
 {
@@ -41,6 +54,11 @@ class Plugin extends \craft\base\Plugin
      */
     public $schemaVersion = '0.1.0';
 
+    /**
+     * @var string
+     */
+    public $t9nCategory = 'translation';
+
     // Public Methods
     // =========================================================================
 
@@ -52,16 +70,17 @@ class Plugin extends \craft\base\Plugin
         parent::init();
         self::$plugin = $this;
 
-        Craft::setAlias('@gocraft/translation', $this->getBasePath());
+        Craft::configure($this, require __DIR__ . '/config/plugin.php');
 
-        Craft::$app->i18n->translations['gocraft-translation'] = [
-            'class' => PhpMessageSource::class,
-            'basePath' => '@gocraft/translation/translations',
-        ];
+        Craft::setAlias('@translation', $this->getBasePath());
 
         // Add in our console commands
         if (Craft::$app instanceof ConsoleApplication) {
-            $this->controllerNamespace = 'gocraft\translation\console\controllers';
+            $this->controllerNamespace = 'panlatent\translation\console\controllers';
+        } else {
+            Event::on(UrlManager::class, UrlManager::EVENT_REGISTER_CP_URL_RULES, function(RegisterUrlRulesEvent $event) {
+                $event->rules = array_merge($event->rules, require __DIR__ . '/config/cproutes.php');
+            });
         }
 
         // Register our utilities
@@ -73,14 +92,65 @@ class Plugin extends \craft\base\Plugin
             }
         );
 
+        /** @var Settings $settings */
+        $settings = $this->getSettings();
+        if ($settings->registerCpSidebar) {
+            Event::on(Cp::class, Cp::EVENT_REGISTER_CP_NAV_ITEMS, function(RegisterCpNavItemsEvent $event) {
+                $event->navItems[$this->handle] = [
+                    'label' => Craft::t('translation', 'Translation'),
+                    'url' => 'translation',
+                    'icon' => '@translation/icon.svg',
+                ];
+            });
+        }
+
         Craft::info(
             Craft::t(
-                'gocraft-translation',
+                'translation',
                 '{name} plugin loaded',
                 ['name' => $this->name]
             ),
             __METHOD__
         );
+    }
+
+    // Service Getters
+    // =========================================================================
+
+    /**
+     * @return Extractors
+     */
+    public function getExtractors()
+    {
+        /** @noinspection PhpIncompatibleReturnTypeInspection */
+        return $this->get('extractors');
+    }
+
+    /**
+     * @return Solutions
+     */
+    public function getSolutions()
+    {
+        /** @noinspection PhpIncompatibleReturnTypeInspection */
+        return $this->get('solutions');
+    }
+
+    /**
+     * @return Sources
+     */
+    public function getSources()
+    {
+        /** @noinspection PhpIncompatibleReturnTypeInspection */
+        return $this->get('sources');
+    }
+
+    /**
+     * @return Translators
+     */
+    public function getTranslators()
+    {
+        /** @noinspection PhpIncompatibleReturnTypeInspection */
+        return $this->get('translators');
     }
 
     // Protected Methods
@@ -104,11 +174,33 @@ class Plugin extends \craft\base\Plugin
      */
     protected function settingsHtml(): string
     {
+        $extractorTypeOptions = $this->_getTypeOptions($this->getExtractors()->getExtractorTypes());
+        $sourceTypeOptions = $this->_getTypeOptions($this->getSources()->getSourceTypes());
+        $translatorTypeOptions = $this->_getTypeOptions($this->getTranslators()->getTranslatorTypes());
+
         return Craft::$app->view->renderTemplate(
             'translation/settings',
             [
-                'settings' => $this->getSettings()
+                'translation' => $this,
+                'extractorTypeOptions' => $extractorTypeOptions,
+                'sourceTypeOptions' => $sourceTypeOptions,
+                'translatorTypeOptions' => $translatorTypeOptions,
+                'settings' => $this->getSettings(),
             ]
         );
+    }
+
+    /**
+     * @param array $types
+     * @return array
+     */
+    private function _getTypeOptions(array $types): array
+    {
+        $typeOptions = [];
+        foreach ($types as $type) {
+            $typeOptions[$type] = ComponentHelper::options($type);
+        }
+
+        return $typeOptions;
     }
 }

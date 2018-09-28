@@ -2,20 +2,20 @@
 /**
  * Translation plugin for Craft 3
  *
- * @link https://gocraftcms.com/
- * @copyright Copyright (c) 2018 gocraftcms.com
+ * @link https://panlatent.com/
+ * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace gocraft\translation\elements;
+namespace panlatent\translation\elements;
 
 use craft\base\Element;
 use craft\elements\db\ElementQueryInterface;
-use gocraft\translation\elements\db\SolutionQuery;
+use panlatent\translation\elements\db\SolutionQuery;
 
 /**
  * Class Solution
  *
- * @package gocraft\translation\elements
+ * @package panlatent\translation\elements
  * @author Panlatent <panlatent@gmail.com>
  */
 class Solution extends Element

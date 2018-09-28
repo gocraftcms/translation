@@ -1,5 +1,5 @@
 {
-    "name": "gocraft/translation",
+    "name": "panlatent/translation",
     "description": "Translation is a plugin to edit your i18n translations for Craft 3",
     "type": "craft-plugin",
     "version": "0.1.0",
@@ -13,8 +13,8 @@
         "translator"
     ],
     "support": {
-        "docs": "https://docs.gocraftcms.com/translation",
-        "issues": "https://github.com/gocraftcms/translation/issues"
+        "docs": "https://translation.panlatent.com/",
+        "issues": "https://github.com/panlatent/translation/issues"
     },
     "license": "MIT",
     "authors": [
@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-          "gocraft\\translation\\": "src/"
+          "panlatent\\translation\\": "src/"
         }
     },
     "extra": {
@@ -37,7 +37,7 @@
         "handle": "translation",
         "hasCpSettings": true,
         "hasCpSection": false,
-        "changelogUrl": "https://raw.githubusercontent.com/gocraftcms/translation/master/CHANGELOG.md",
-        "class": "gocraft\\translation\\Plugin"
+        "changelogUrl": "https://raw.githubusercontent.com/panlatent/translation/master/CHANGELOG.md",
+        "class": "panlatent\\translation\\Plugin"
     }
 }

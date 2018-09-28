@@ -6,9 +6,6 @@
  * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace panlatent\translation\base;
-
-trait ExtractorTrait
-{
-
-}
+return [
+    'translation/translators' => 'translation/translators/translator-index'
+];

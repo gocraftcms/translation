@@ -2,11 +2,11 @@
 /**
  * Translation plugin for Craft 3
  *
- * @link https://gocraftcms.com/
- * @copyright Copyright (c) 2018 gocraftcms.com
+ * @link https://panlatent.com/
+ * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace gocraft\translation\elements\db;
+namespace panlatent\translation\elements\db;
 
 use craft\elements\db\ElementQuery;
 

@@ -6,15 +6,15 @@
  * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace panlatent\translation\messagestores;
+namespace panlatent\translation\extractors;
 
 use Craft;
 use panlatent\translation\base\Extractor;
 
-class PhpSource extends Extractor
+class TwigExtractor extends Extractor
 {
     public static function displayIconPath(): string
     {
-        return Craft::getAlias('@panlatent/translation/icons/php.svg');
+        return Craft::getAlias('@panlatent/translation/icons/twig.svg');
     }
 }

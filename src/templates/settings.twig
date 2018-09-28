@@ -7,3 +7,59 @@
     name: 'someAttribute',
     value: settings['someAttribute']})
 }}
+
+{{ forms.lightswitchField({
+    label: 'Show in sidebar',
+    instructions: 'Show the translation nav item in sidebar.',
+    id: 'registerCpSidebar',
+    name: 'registerCpSidebar',
+    on: settings.registerCpSidebar,
+    errors: settings.getErrors('registerCpSidebar'),
+}) }}
+
+<hr>
+
+<h2>{{ 'Translators'|t('translation') }}</h2>
+
+<ul class="icons">
+    {% for translatorType,options in translatorTypeOptions %}
+        <li>
+            <a href="{{ options.url ?? "#" }}">
+                <div class="icon">{{ svg(options.icon) }}</div>
+                {{ options.label }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<h2>{{ 'Extractors'|t('translation') }}</h2>
+
+<ul class="icons">
+    {% for extractorType,options in extractorTypeOptions %}
+        <li>
+            <a href="{{ options.url ?? "#" }}">
+                <div class="icon">{{ svg(options.icon) }}</div>
+                {{ options.label }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<hr>
+
+<h2>{{ 'Sources'|t('translation')}} </h2>
+
+<ul class="icons">
+    {% for sourceType,options in sourceTypeOptions %}
+        <li>
+            <a href="{{ options.url ?? "#" }}">
+                <div class="icon">{{ svg(options.icon) }}</div>
+                {{ options.label }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<hr>

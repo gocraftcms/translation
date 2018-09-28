@@ -2,15 +2,18 @@
 /**
  * Translation plugin for Craft 3
  *
- * @link https://gocraftcms.com/
- * @copyright Copyright (c) 2018 gocraftcms.com
+ * @link https://panlatent.com/
+ * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace gocraft\translation\base;
+namespace panlatent\translation\base;
 
 use craft\base\SavableComponentInterface;
 
 interface TranslatorInterface extends SavableComponentInterface
 {
-
+    /**
+     * @return string
+     */
+    public static function displayIconPath(): string;
 }

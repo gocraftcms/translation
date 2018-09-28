@@ -1,11 +1,11 @@
 Translation plugin for Craft 3
 ===============================
-[![Build Status](https://travis-ci.org/gocraftcms/translation.svg)](https://travis-ci.org/gocraftcms/translation)
-[![Coverage Status](https://coveralls.io/repos/github/gocraftcms/translation/badge.svg?branch=master)](https://coveralls.io/github/gocraftcms/translation?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/gocraft/translation/v/stable.svg)](https://packagist.org/packages/gocraft/translation)
-[![Total Downloads](https://poser.pugx.org/gocraft/translation/downloads.svg)](https://packagist.org/packages/gocraft/translation) 
-[![Latest Unstable Version](https://poser.pugx.org/gocraft/translation/v/unstable.svg)](https://packagist.org/packages/gocraft/translation)
-[![License](https://poser.pugx.org/gocraft/translation/license.svg)](https://packagist.org/packages/gocraft/translation)
+[![Build Status](https://travis-ci.org/panlatent/translation.svg)](https://travis-ci.org/panlatent/translation)
+[![Coverage Status](https://coveralls.io/repos/github/panlatent/translation/badge.svg?branch=master)](https://coveralls.io/github/panlatent/translation?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/panlatent/translation/v/stable.svg)](https://packagist.org/packages/panlatent/translation)
+[![Total Downloads](https://poser.pugx.org/panlatent/translation/downloads.svg)](https://packagist.org/packages/panlatent/translation) 
+[![Latest Unstable Version](https://poser.pugx.org/panlatent/translation/v/unstable.svg)](https://packagist.org/packages/panlatent/translation)
+[![License](https://poser.pugx.org/panlatent/translation/license.svg)](https://packagist.org/packages/panlatent/translation)
 [![Craft CMS](https://img.shields.io/badge/Powered_by-Craft_CMS-orange.svg?style=flat)](https://craftcms.com/)
 [![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](https://www.yiiframework.com/)
 
@@ -32,7 +32,7 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require gocraft/translation
+        composer require panlatent/translation
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Translation.
 
@@ -41,7 +41,7 @@ Usage
 
 Documentation
 -------------
-[Documentation](https://docs.gocraftcms.com/en/latest/translation)
+[Documentation](https://translation.gocraftcms.com/)
 
 License
 -------

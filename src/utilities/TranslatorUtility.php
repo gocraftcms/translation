@@ -2,20 +2,20 @@
 /**
  * Translation plugin for Craft 3
  *
- * @link https://gocraftcms.com/
- * @copyright Copyright (c) 2018 gocraftcms.com
+ * @link https://panlatent.com/
+ * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace gocraft\translation\utilities;
+namespace panlatent\translation\utilities;
 
 use Craft;
 use craft\base\Utility;
-use gocraft\translation\assets\TranslatorUtilityAsset;
+use panlatent\translation\assets\TranslatorUtilityAsset;
 
 /**
  * Class TranslatorUtility
  *
- * @package gocraft\translation\utilities
+ * @package panlatent\translation\utilities
  * @author Panlatent <panlatent@gmail.com>
  */
 class TranslatorUtility extends Utility
@@ -52,7 +52,7 @@ class TranslatorUtility extends Utility
      */
     public static function iconPath()
     {
-        return Craft::getAlias("@gocraft/translation/icon.svg");
+        return Craft::getAlias("@panlatent/translation/icon.svg");
     }
 
     /**

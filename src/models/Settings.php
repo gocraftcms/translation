@@ -2,11 +2,11 @@
 /**
  * Translation plugin for Craft 3
  *
- * @link https://gocraftcms.com/
- * @copyright Copyright (c) 2018 gocraftcms.com
+ * @link https://panlatent.com/
+ * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace gocraft\translation\models;
+namespace panlatent\translation\models;
 
 use craft\base\Model;
 
@@ -21,6 +21,11 @@ class Settings extends Model
      * @var string
      */
     public $someAttribute = 'Some Default';
+
+    /**
+     * @var bool
+     */
+    public $registerCpSidebar = true;
 
     // Public Methods
     // =========================================================================
@@ -40,6 +45,7 @@ class Settings extends Model
         return [
             ['someAttribute', 'string'],
             ['someAttribute', 'default', 'value' => 'Some Default'],
+            ['registerCpSidebar', 'boolean'],
         ];
     }
 }

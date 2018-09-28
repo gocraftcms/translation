@@ -6,9 +6,11 @@
  * @copyright Copyright (c) 2018 Panlatent
  */
 
-namespace panlatent\translation\base;
+namespace panlatent\translation\errors;
 
-trait ExtractorTrait
+use yii\base\Exception;
+
+class TranslatorException extends Exception
 {
 
 }

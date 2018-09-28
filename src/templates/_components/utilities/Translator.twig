@@ -1,9 +1,7 @@
-<h1>Translator</h1>
-
-{% set iconUrl = view.getAssetManager().getPublishedUrl('@gocraft/translation/assets/translatorUtility/dist', true) ~ '/img/translatorUtility-icon.svg' %}
-
-<img src="{{ iconUrl }}" height="64" width="64" />
-
-<p>Your Utility content goes here</p>
+{% import "_includes/forms" as forms %}
 
 <p>{{ someVar }}</p>
+
+{{ forms.selectField({
+    label: "Translator"
+}) }}
